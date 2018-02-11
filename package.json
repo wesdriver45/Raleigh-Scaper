@@ -1,0 +1,28 @@
+{
+  "name": "raleigh-scraper",
+  "version": "1.0.0",
+  "description": "pull all raleigh news articles from local paper",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesdriver45/Raleigh-Scaper.git"
+  },
+  "author": "Wesley Blake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesdriver45/Raleigh-Scaper/issues"
+  },
+  "homepage": "https://github.com/wesdriver45/Raleigh-Scaper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.0.4",
+    "request": "^2.83.0"
+  }
+}

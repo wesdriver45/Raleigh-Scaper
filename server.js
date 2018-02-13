@@ -6,14 +6,14 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const mongojs = require("mongojs");
 const mongoose = require("mongoose");
-const morgan = require("morgan");
+const logger = require("morgan");
 const request = require("request");
 const sequelize = require("sequelize");
 
 //require all models
 var db = require("./models");
 
-var port = 3000;
+var PORT = 3000;
 
 //express
 var app = express();
@@ -21,7 +21,7 @@ var app = express();
 //morgan logger
 app.use(logger("dev"));
 //body-parser
-app.user(bodyParser.urlencoded({ extended: falsse }));
+app.use(bodyParser.urlencoded({ extended: false }));
 //express.static for public folder
 app.use(express.static("public"));
 
@@ -56,6 +56,7 @@ app.get("/scrape", function(req, res) {
         .catch(function(err) {
           return res.json(err);
         });
+        
     });
     //signal the client scrape complete
     res.send("Scrape Complete");
